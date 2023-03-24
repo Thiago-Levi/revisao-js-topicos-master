@@ -6,6 +6,8 @@
 */
 
 const myString = '    JS      '
+console.log(myString.trim())
+
 
 /*
   02
@@ -16,12 +18,19 @@ const myString = '    JS      '
   - Exiba o array ordenado no console.
 */
 
-const people = [
+const peoples = [
   { firstName: 'Estevão', lastName: 'Rodriguez', score: 90 },
   { firstName: 'José', lastName: 'Antônio', score: 100 },
   { firstName: 'Felipe', lastName: 'Tavares', score: 71 },
   { firstName: 'Eric', lastName: 'Silva', score: 82 }
 ]
+
+const orderedBy = (arrayOfObj, property) => {
+  const orderedArray = arrayOfObj.map(intem => intem).sort((a,b)=> a[property] - b[property])
+  return orderedArray
+}
+const arrayOrdered = orderedBy(peoples, "score")
+console.log(arrayOrdered, peoples)
 
 /*
   03
@@ -34,6 +43,9 @@ const people = [
 */
 
 const animals = ['cão', 'gato', 'boi', 'leão', 'gnu', 'alce', 'ema']
+const animalsFiltered = animals.filter((animal) => animal.length === 3)
+console.log(animalsFiltered)
+
 
 /*
   04
