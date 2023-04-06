@@ -48,7 +48,12 @@ console.log(growingNumbers)
   - Encontre e exiba no console o 1º item maior que 50 do array abaixo.
 */
 
-const randomNumbers = [10, 5, 0, 40, 60, 10, 20, 70]
+const randomNumbers = [10, 5, 0, 40, 55, 60, 10, 20, 70]
+function biggerThen50(arrayOfNumbers){
+  return arrayOfNumbers.find(number => number > 50)
+
+}
+console.log(`O 1º item maior que 50 é:${biggerThen50(randomNumbers)}`)
 
 /*
   05
@@ -129,7 +134,11 @@ const pets = [
   { name: 'Chico', age: 6, gender: 'Male', type: 'Dog' }
 ]
 
-const dogsWithHumanAge = pets.filter(({type, age}) => type === "Dog" ).map(({name, age, gender, type}) => { return {name, age: age * 7 , gender, type}})
+const dogsWithHumanAge = pets
+.filter(({type, age}) => type === "Dog" )
+.map(({name, age, gender, type}) =>{ 
+  return {name, age: age * 7 , gender, type}
+})
 
 console.log(pets)
 console.log(dogsWithHumanAge)
