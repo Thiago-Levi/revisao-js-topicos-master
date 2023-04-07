@@ -54,6 +54,14 @@ console.log(animalsFiltered)
     nome de cada animal. Ex.: [6, 8, 2].
 */
 
+const qtdLetters = (array) =>{
+  const arrayQtdLetters = animals.map(animal => animal.length)
+  return arrayQtdLetters
+}
+
+console.log(qtdLetters(animals))
+
+
 
 
 /*
@@ -72,6 +80,15 @@ const friends = [
   { id: 5, name: 'Solange', nearMe: false }
 ]
 
+const friendsNearMe = (arrayFriends) =>{
+    const arrayWithNeaMe = arrayFriends
+    .map(friend => friend)
+    .filter(({nearMe}) => nearMe )
+
+    return arrayWithNeaMe
+}
+
+console.log(friendsNearMe(friends))
 
 
 /*
